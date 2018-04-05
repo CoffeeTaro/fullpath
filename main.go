@@ -5,6 +5,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -22,10 +23,10 @@ func main() {
 		s = stdin.Text()
 	}
 	// 絶対パスへの変換
-	p, err := filepath.Abs(s)
+	ap, err := filepath.Abs(s)
 	if err != nil {
 		log.Fatal(err)
 	}
 	// 出力
-	println(p)
+	fmt.Println(ap)
 }
